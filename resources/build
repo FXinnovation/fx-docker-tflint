@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -x -eo pipefail
+
+###
+# Installation
+###
+
+apk add --no-cache curl
+
+curl -sSLo /tmp/tflint${TFLINT_VERSION}.zip \
+https://github.com/terraform-linters/tflint/releases/download/${TFLINT_VERSION}/tflint_darwin_amd64.zip
+
+unzip /tmp/tflint${TFLINT_VERSION}.zip -d /tmp
+
+install /tmp/tflint /usr/local/bin/
+
+###
+# Cleaning image
+###
+
+apk del curl
+
+###
+# Test
+###
+
+tflint --version
+
+###
+# CIS Hardening
+###
+
+chmod 0600 /etc/shadow
+
+touch /etc/login.defs
+chmod 0444 /etc/login.defs
