@@ -1,3 +1,9 @@
+0.3.0
+=======
+
+- chore: pins alpine base image to 3.14.1
+- chore: pins tflint version to 0.31.0
+
 0.2.0
 =======
 
