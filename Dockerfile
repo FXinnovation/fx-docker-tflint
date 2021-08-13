@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.14.1
 
 ENV TFLINT_VERSION="v0.31.0"
 
@@ -19,7 +19,7 @@ ENTRYPOINT ["tflint"]
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="tflint" \
       "org.label-schema.base-image.name"="docker.io/library/alpine" \
-      "org.label-schema.base-image.version"="3.11" \
+      "org.label-schema.base-image.version"="3.14.1" \
       "org.label-schema.description"="TFLint linter in a container" \
       "org.label-schema.url"="https://github.com/terraform-linters/tflint" \
       "org.label-schema.vcs-url"="https://github.com/terraform-linters/tflint" \
