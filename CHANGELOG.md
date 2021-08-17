@@ -1,8 +1,9 @@
 0.3.0
 =======
 
+- feat: pins tflint version to 0.31.0
 - chore: pins alpine base image to 3.14.1
-- chore: pins tflint version to 0.31.0
+- chore: pins pre-commit-hooks to v4.0.1
 
 0.2.0
 =======
